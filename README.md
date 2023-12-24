@@ -15,12 +15,16 @@
 3. [Methods and Materials](#methods-and-materials)
 4. [Results](#results)
 5. [Discussion](#discussion)
-6. [References](#references)
 
 # 1. Introduction <a name="introduction"></a>
+
 Individuals with severe movement disorders, such as paralysis, locked-in syndrome (LIS), or amyotrophic lateral sclerosis (ALS) require alternative methods for communication and control. LIS is a state where patients are unable to generate voluntary speech, limb, or facial movements, despite their mental awareness and alertness (Laureys et al., 2005). Existing augmentative communication methods necessitate some level of voluntary muscle function, making them unsuitable for those who are completely paralysed or have significant motor disabilities. These individuals need a communication channel that bypasses muscle-based pathways and allows them to communicate without relying on peripheral nerves and muscles.
 
 Brain-Computer Interfaces (BCIs) have emerged as a groundbreaking technology facilitating direct communication between the human brain and computers, circumventing the need for conventional input methods. This innovation holds immense promise, particularly for individuals grappling with profound motor impairments like LIS, offering renewed avenues for mobility and communication. Among various BCI modalities, Motor Imagery-based BCIs (MI-BCIs), leveraging Electroencephalogram (EEG) signals for brainwave acquisition, have garnered significant attention due to the advantage of high temporal resolution without necessitating invasive procedures. This has translated into diverse applications, from steering wheelchairs to manipulating robotic limbs, profoundly enhancing user-environment interaction. Within this context, EEG signals used for BCI control are susceptible to a myriad of influences, including the user's emotional state and levels of fatigue. These dynamic variations in EEG dynamics consequently impinge upon the efficacy of feature extraction within the BCI framework.
+
+<p align="center">
+  <img src="https://github.com/osheenjain/Investigating-the-Impact-of-Emotionally-Charged-Stimuli-on-Visual-Imagery-in-EEG-based-BCI-Systems/raw/main/Plots%20and%20Diagrams/BCI.png" alt="Figure 2.1. Overview of Non-invasive EEG-based BCI system">
+</p>
 
 Given these complexities, the investigation of emotional stimuli's impact on visual imagery within EEG-based BCI systems becomes a matter of significance. This research endeavour aligns seamlessly with the pursuit of further enhancing the performance, reliability, and adaptability of BCIs. Through meticulous examination, we aspire to unravel the intricate interplay between emotional stimuli and neural patterns to bolster the robustness of EEG-based BCI applications. 
 
@@ -174,7 +178,19 @@ This study delves into the realm of BCIs, specifically focusing on Visual Imager
     - Negative stimuli: Significant oscillations (1.2 to 2 seconds, p = 0.03) and (1.2 to 3 seconds, p = 0.002).
     - No significant negative clusters for any emotional stimuli.
 - **Visualization:**
-    - Figure 4.1 illustrates alpha and beta oscillation patterns, with significant time points.
+    - Following Figures illustrates alpha and beta oscillation patterns, with significant time points.
+ 
+<p align="center">
+  <img src="https://github.com/osheenjain/Investigating-the-Impact-of-Emotionally-Charged-Stimuli-on-Visual-Imagery-in-EEG-based-BCI-Systems/raw/main/Plots%20and%20Diagrams/Negative_plot.svg" alt="Push vs. Relax during Negative Emotional Stimuli" title="Push vs. Relax during Negative Emotional Stimuli">
+</p>
+
+<p align="center">
+  <img src="https://github.com/osheenjain/Investigating-the-Impact-of-Emotionally-Charged-Stimuli-on-Visual-Imagery-in-EEG-based-BCI-Systems/raw/main/Plots%20and%20Diagrams/Neutral_plot.svg" alt="Push vs. Relax during Neutral Emotional Stimuli" title="Push vs. Relax during Neutral Emotional Stimuli">
+</p>
+
+<p align="center">
+  <img src="https://github.com/osheenjain/Investigating-the-Impact-of-Emotionally-Charged-Stimuli-on-Visual-Imagery-in-EEG-based-BCI-Systems/raw/main/Plots%20and%20Diagrams/Positive_plot.svg" alt="Push vs. Relax during Positive Emotional Stimuli" title="Push vs. Relax during Positive Emotional Stimuli">
+</p>
 
 ### 4.2 Classification Performance and Results
 
@@ -183,13 +199,21 @@ This study delves into the realm of BCIs, specifically focusing on Visual Imager
 - **Explained Variance:**
     - FD-PCA: First principal component substantial variance (0.8461 relax, 0.5321 push).
     - SD-PCA: Dominant first principal component (0.3592 relax, 0.2165 push).
-    - Visualization in Figure 4.2.
+
+<p align="center">
+<img src = "https://github.com/osheenjain/Investigating-the-Impact-of-Emotionally-Charged-Stimuli-on-Visual-Imagery-in-EEG-based-BCI-Systems/blob/main/Plots%20and%20Diagrams/PCA.png">
+</p>
 
 ### **4.2.2 Grid Search and Cross-Validation**
 
 - **Hyperparameter Tuning:**
     - Optimal parameters (C=1, k=3, n_estimators=50) for SVM, KNN, and Random Forest.
     - Overfitting observed in Random Forest learning curve (Figure 4.3).
+
+<p align="center">
+<img src = "https://github.com/osheenjain/Investigating-the-Impact-of-Emotionally-Charged-Stimuli-on-Visual-Imagery-in-EEG-based-BCI-Systems/blob/main/Plots%20and%20Diagrams/Learning%20Curve%20Graphs%20Depicting%20the%20Performance%20of%20SVM%2C%20KNN%2C%20and%20Random%20Forest%20Classifiers%20concerning%20Positively%20Charged%20Stimuli.jpeg">
+</p>
+
 - **Performance Metrics:**
     - Table 5 (SM1) displays precision, recall, and f1-score for relax and push across classifiers.
     - KNN stands out as the most robust performer.
